@@ -1,0 +1,47 @@
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  background-color: #eee;
+
+}
+.logo{
+  width: 150px;
+  height: 100px;
+
+}
+.nav-items ul{
+  font-size: 24px;
+  list-style: none;
+  display: flex;
+  padding: 0px 20px;;
+}
+.nav-items ul li{
+  padding: 10px;
+  margin: 10px;
+}
+
+.res-container{
+  
+ display: flex;
+ flex-wrap: wrap;
+ gap: 10px;
+}
+.res-cards{
+  padding: 5px;
+  width:190px;
+  height:450px;
+  margin-top: 5px;
+ background-color: #f0f0f0;
+}
+.res-cards:hover{
+  border:1px solid #b9b9b9;
+  cursor: pointer;
+}
+.seacrh{
+  padding: 10px;
+}
+.res-logo{
+  width: 100%;
+  
+}
