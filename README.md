@@ -23,7 +23,13 @@ top rated restaurent
 
 
 ----------------------
-
+represent data by useing map
+represent filter resturent(top reated restrudent)
+fetch data from api
+add shimmer ui component
+build toggle button in header of login,logout
+add filter for search by name
+-----------------------
 react hooks
 useState() superpowerfull react variable
 useeEffect()

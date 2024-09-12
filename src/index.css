@@ -33,6 +33,10 @@
   height:450px;
   margin-top: 5px;
  background-color: #f0f0f0;
+
+}
+.res-cards h4{
+  flex-wrap: wrap;
 }
 .res-cards:hover{
   border:1px solid #b9b9b9;
@@ -48,4 +52,33 @@
 .filter-btn{
   margin: 10px;
   cursor: pointer;
+}
+.shimmer-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+.shimmer-card{
+ margin: 20px;
+  width: 200px;
+  height: 400px;
+  background-color: #f0f0f0;
+}
+.filter{
+  display: flex;
+  gap:12px
+
+}
+.filter button{
+  cursor: pointer;
+  background-color: #eee;
+  border: none;
+  color: #000;
+  gap:12px
+}
+
+.search-box{
+  padding: 12px;
+}
+.search-btn{
+  padding: 12px;
 }
