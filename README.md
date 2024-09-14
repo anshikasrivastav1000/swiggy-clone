@@ -33,6 +33,16 @@ add filter for search by name
 react hooks
 useState() superpowerfull react variable
 useeEffect()
+---------------------------------
+useing react router dom 
+done routing
+with createBrowserRouter,rouuterProvider
+----------------
+useRouteError TO SHOW ERROR
+IMPORTED from react router dom
 
+--------------------------------
+childern route
+import { createBrowserRouter,RouterProvider,Outlet } from "react-router-dom";
 
 
