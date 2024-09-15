@@ -7,11 +7,10 @@ const RestaurantMenu =() =>{
   const [resInfo,setResInfo]=useState(null);
   const {resId} = useParams();
 
+  useEffect(() =>{
+    fetchMenu();
+        },[]);
 
-
-   useEffect(() =>{
-fetchMenu();
-    },[]);
 
 const fetchMenu = async () =>{
 const data = await fetch(
@@ -19,7 +18,9 @@ const data = await fetch(
 );
 const json = await data.json();
 console.log(json);
-setResInfo(json.data)};
+setResInfo(json.data)
+};
+
 
 
 if(resInfo === null) return <Shimmer/> 

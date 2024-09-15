@@ -4,6 +4,7 @@ import Shimmer from './Shimmer';
 import {useState,useEffect} from 'react'
 import {Link} from "react-router-dom"
 import axios from 'axios';
+import {useOnlineStatus} from '../utils/useOnlineStatus'
 const Body =() =>{
 
 const [listOfRestaurent,setlistOfRestaurent] = useState([]);
@@ -23,8 +24,10 @@ const fetchData = async  () =>{
   setlistOfRestaurent(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
   setfilteredList(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
 };
-//conditional rendering
- 
+
+ const onlineStatus = useOnlineStatus();
+ if(onlineStatus === false)
+  return <h1>Please check your internet connection</h1>
 
 
     return listOfRestaurent.length === 0 ?  <Shimmer/> :(

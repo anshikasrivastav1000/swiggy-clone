@@ -41,7 +41,8 @@ box-sizing: border-box;
   
  display: flex;
  flex-wrap: wrap;
- gap: 10px;
+ gap: 50px;
+ margin: auto;
 }
 .res-cards{
   padding: 5px;
@@ -49,6 +50,7 @@ box-sizing: border-box;
   height:450px;
   margin-top: 5px;
  background-color: #f0f0f0;
+
 
 }
 .res-cards h4{
@@ -100,4 +102,23 @@ box-sizing: border-box;
 }
 .menu{
   text-align: center;
+}
+.user-card{
+  text-align: center;
+
+  padding: 10px;
+  background-color: #f0f0f0;
+  margin-top: 60px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+.user-info{
+  text-align: center;
+ 
+}
+.user-info img{
+  width:300px;
 }
