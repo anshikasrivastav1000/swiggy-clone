@@ -32,12 +32,15 @@ const fetchData = async  () =>{
 
     return listOfRestaurent.length === 0 ?  <Shimmer/> :(
       <div className="body">
-        <div className="filter">
-          <div className="search">
-            <input type="text" className="search-box" value={searchText} onChange={(e) =>{
+        <div className="filter flex">
+          <div className="search m-4 p-4">
+            <input type="text" className="border border-solid border-black rounded-sm" value={searchText} onChange={(e) =>{
               setsearchText(e.target.value)
             }}/>
-        <button onClick={() => {
+            </div>
+            <div>
+        <button className="px-4 py-2 bg-green-100 m-4"
+        onClick={() => {
         
 
          
@@ -54,15 +57,16 @@ const fetchData = async  () =>{
         
         }}>
         Search</button>
-          </div>
+          
 
-           <button className="filter-btn" onClick ={() =>{
+           <button className="px-4 py-2 bg-green-100" onClick ={() =>{
            const filteredList = listOfRestaurent.filter((res) => res.info.avgRating > 4.5);
            setlistOfRestaurent(filteredList);
            }}> Top Rated Restaurant</button> 
+           </div>
         </div>
       
-         <div className="res-container">
+         <div className="flex flex-wrap">
           {
             filterRestaurant.map((restaurant)=>(
              <Link 
