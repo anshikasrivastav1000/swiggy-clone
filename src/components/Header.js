@@ -5,7 +5,7 @@ const Header = () => {
   const [btnName, setBtnName] = useState("Signin");
 const onlineStatus = useOnlineStatus();
   return (
-    <div className="flex justify-between  bg-green-100">
+    <div className="flex justify-between  bg-green-100 ">
       <div className="logo-container">
         <img
           className="w-40"
