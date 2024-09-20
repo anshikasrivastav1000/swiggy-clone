@@ -9,7 +9,9 @@ const Body =() =>{
 
 const [listOfRestaurent,setlistOfRestaurent] = useState([]);
 const [searchText,setsearchText] = useState("")
-const [filterRestaurant,setfilteredList ] = useState([])
+const [filterRestaurant,setfilteredList ] = useState([]);
+
+
 
 
 useEffect(() =>{
@@ -18,11 +20,12 @@ useEffect(() =>{
 },[])
 const fetchData = async  () =>{
   const data = await fetch(
-   ' https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.87560&lng=80.91150&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTIN'
+   'https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.87560&lng=80.91150&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING'
   )
   const json = await data.json();
-  setlistOfRestaurent(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-  setfilteredList(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+  console.log(json)
+  setlistOfRestaurent(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+  setfilteredList(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
 };
 
  const onlineStatus = useOnlineStatus();
@@ -71,7 +74,12 @@ const fetchData = async  () =>{
             filterRestaurant.map((restaurant)=>(
              <Link 
              key={restaurant.info.id}
-             to ={"/restaurants/" + restaurant.info.id}><RestaurentCard  resData={restaurant}/></Link> 
+             to ={"/restaurants/" + restaurant.info.id}
+        
+             
+             
+             
+             ><RestaurentCard  resData={restaurant}/></Link> 
               ))
           }
           

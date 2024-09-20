@@ -46,3 +46,11 @@ childern route
 import { createBrowserRouter,RouterProvider,Outlet } from "react-router-dom";
 
 
+----------------------------------
+higher order component is a function that takes acomponent and returns a component
+
+'s a pattern where a function takes a component and returns a new component with additional props or behaviors. HOCs allow you to enhance components with added functionality without modifying their structure.
+why ,when it is used in a component
+
+--------------------------------------
+controled or uncontroled
