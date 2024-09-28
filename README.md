@@ -54,3 +54,12 @@ why ,when it is used in a component
 
 --------------------------------------
 controled or uncontroled
+-----------------------------------
+redux toolkit
+-install @reduxjs/toolkit and react-redux
+npm install @reduxjs/toolkit
+-build our store
+-connect our store to our app
+-slice(cart slice)
+-dispatch(action)
+-selector

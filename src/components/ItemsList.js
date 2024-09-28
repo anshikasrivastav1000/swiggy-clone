@@ -1,7 +1,16 @@
 import { CDN_URL } from "../utils/Constants";
+import {useDispatch} from "react-redux"
+import {addItem} from "../utils/cartSlice"
 
 const ItemsList = ({ items }) => {
-//   console.log(items);
+   
+  const dispatch = useDispatch()
+  const handleAddItem = (item) =>{
+    //dispatch an anction
+    dispatch(addItem(item))
+    console.log(items)
+  }
+  // console.log(items);
   return (
     <div className="p-4 bg-gray-100 rounded-lg shadow-lg">
       {items.map((item) => (
@@ -34,7 +43,9 @@ const ItemsList = ({ items }) => {
               className="w-full h-full object-cover rounded-md"
             />
             {/* Button Overlay */}
-            <button className="absolute inset-0 bg-black bg-opacity-50 text-white text-sm font-semibold flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+            <button className="absolute inset-0 bg-black bg-opacity-50 text-white text-sm font-semibold flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300"
+            onClick={() => handleAddItem(item)}
+            >
               Add to Cart
             </button>
           </div>
